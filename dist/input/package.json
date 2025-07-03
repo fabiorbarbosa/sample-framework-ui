@@ -17,8 +17,6 @@
     },
     ".": {
       "types": "./index.d.ts",
-      "esm2022": "./esm2022/sample-framework-ui-input.mjs",
-      "esm": "./esm2022/sample-framework-ui-input.mjs",
       "default": "./fesm2022/sample-framework-ui-input.mjs"
     }
   }

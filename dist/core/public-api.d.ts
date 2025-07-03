@@ -1,1 +1,0 @@
-export * from './lib/sample-pipe.pipe';
