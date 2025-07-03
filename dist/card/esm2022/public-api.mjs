@@ -1,0 +1,6 @@
+/*
+ * Public API Surface of card
+ */
+export * from './lib/card.service';
+export * from './lib/card.component';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL2NhcmQvc3JjL3B1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7QUFFSCxjQUFjLG9CQUFvQixDQUFDO0FBQ25DLGNBQWMsc0JBQXNCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogUHVibGljIEFQSSBTdXJmYWNlIG9mIGNhcmRcbiAqL1xuXG5leHBvcnQgKiBmcm9tICcuL2xpYi9jYXJkLnNlcnZpY2UnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvY2FyZC5jb21wb25lbnQnO1xuIl19

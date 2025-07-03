@@ -1,0 +1,6 @@
+/*
+ * Public API Surface of input
+ */
+export * from './lib/input.service';
+export * from './lib/input.component';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL2lucHV0L3NyYy9wdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHO0FBRUgsY0FBYyxxQkFBcUIsQ0FBQztBQUNwQyxjQUFjLHVCQUF1QixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIFB1YmxpYyBBUEkgU3VyZmFjZSBvZiBpbnB1dFxuICovXG5cbmV4cG9ydCAqIGZyb20gJy4vbGliL2lucHV0LnNlcnZpY2UnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvaW5wdXQuY29tcG9uZW50JztcbiJdfQ==

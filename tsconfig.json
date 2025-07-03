@@ -7,6 +7,20 @@
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
+    "paths": {
+      "all": [
+        "./dist/all"
+      ],
+      "button": [
+        "./dist/button"
+      ],
+      "card": [
+        "./dist/card"
+      ],
+      "input": [
+        "./dist/input"
+      ]
+    },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
