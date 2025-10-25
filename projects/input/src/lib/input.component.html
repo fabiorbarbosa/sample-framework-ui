@@ -1,0 +1,13 @@
+<label class="lib-input">
+  <span class="lib-input__label" *ngIf="label">{{ label }}</span>
+
+  <input
+    class="lib-input__control"
+    [attr.type]="type"
+    [attr.placeholder]="placeholder"
+    [ngModel]="value"
+    (ngModelChange)="onValueChange($event)"
+  />
+
+  <span class="lib-input__hint" *ngIf="hint">{{ hint }}</span>
+</label>

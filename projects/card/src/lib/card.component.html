@@ -1,0 +1,15 @@
+<article class="lib-card" [class.lib-card--highlight]="highlight">
+  <header class="lib-card__header">
+    <p class="lib-card__eyebrow">{{ eyebrow }}</p>
+    <h3 class="lib-card__title">{{ title }}</h3>
+    <p class="lib-card__subtitle" *ngIf="subtitle">{{ subtitle }}</p>
+  </header>
+
+  <section class="lib-card__body">
+    <ng-content></ng-content>
+  </section>
+
+  <footer class="lib-card__footer" *ngIf="footer">
+    {{ footer }}
+  </footer>
+</article>

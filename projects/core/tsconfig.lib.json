@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/lib",
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "types": [],
+    "baseUrl": ".",
+    "paths": {
+      "@sample-framework-ui/core": [
+        "src/public-api"
+      ],
+    }
+  },
+  "exclude": [
+    "**/*.spec.ts"
+  ]
+}

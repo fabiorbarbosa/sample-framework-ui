@@ -1,0 +1,11 @@
+<button
+  type="button"
+  class="lib-btn"
+  [class.lib-btn--primary]="variant === 'primary'"
+  [class.lib-btn--secondary]="variant === 'secondary'"
+  [class.lib-btn--ghost]="variant === 'ghost'"
+  [disabled]="disabled"
+  (click)="emitClick($event)"
+>
+  <span>{{ label }}</span>
+</button>

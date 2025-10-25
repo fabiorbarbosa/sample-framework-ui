@@ -1,0 +1,8 @@
+Backup of previous card files before revert.
+Files changed previously:
+- projects/card/src/lib/card.component.ts (had styles removed)
+- projects/card/src/lib/card.module.ts (CoreModule import removed)
+- projects/card/tsconfig.lib.json (simplified)
+- projects/card/ng-package.json (cssUrl etc added)
+
+If you need the pre-revert contents, review shell history or ask to create git snapshots next time.
