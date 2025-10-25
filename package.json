@@ -12,7 +12,9 @@
     "build:card": "npm run sync:styles && ng build card",
     "build:button": "npm run sync:styles && ng build button",
     "build:input": "npm run sync:styles && ng build input",
-    "build:libs": "npm run build:core && npm run build:card && npm run build:button && npm run build:input"
+    "build:libs": "npm run build:core && npm run build:card && npm run build:button && npm run build:input",
+    "storybook": "ng run core:storybook",
+    "build-storybook": "ng run core:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +34,11 @@
     "@angular-devkit/build-angular": "^18.2.0",
     "@angular/cli": "^18.2.0",
     "@angular/compiler-cli": "^18.2.0",
+    "@storybook/addon-a11y": "^8.4.4",
+    "@storybook/addon-essentials": "^8.4.4",
+    "@storybook/addon-interactions": "^8.4.4",
+    "@storybook/angular": "^8.4.4",
+    "@storybook/test": "^8.4.4",
     "@types/jasmine": "~5.1.0",
     "autoprefixer": "^10.4.20",
     "jasmine-core": "~5.2.0",
@@ -42,6 +49,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^18.2.0",
     "postcss": "^8.4.38",
+    "storybook": "^8.4.4",
     "tailwindcss": "^3.4.7",
     "typescript": "~5.5.2"
   }

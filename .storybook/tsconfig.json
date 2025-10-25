@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "allowJs": true
+  },
+  "exclude": [],
+  "include": [
+    "../projects/**/*.stories.ts",
+    "../projects/**/*.stories.tsx",
+    "../projects/**/*.stories.mdx",
+    "./**/*.ts"
+  ]
+}

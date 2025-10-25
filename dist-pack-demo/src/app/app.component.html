@@ -1,0 +1,58 @@
+<main class="demo-shell">
+  <lib-core-banner
+    title="Sample Framework UI"
+    subtitle="Demonstração rápida consumindo os pacotes .tgz gerados em dist-pack."
+  />
+
+  <section class="demo-grid">
+    <lib-card
+      *ngFor="let card of cards"
+      [eyebrow]="card.eyebrow"
+      [title]="card.title"
+      [subtitle]="card.subtitle"
+      [footer]="card.footer"
+      [highlight]="!!card.highlight"
+    >
+      <p>{{ card.copy }}</p>
+    </lib-card>
+  </section>
+
+  <section class="demo-form">
+    <header>
+      <p class="eyebrow">Feedback instantâneo</p>
+      <h2>Combine lib-input e lib-button</h2>
+      <p>
+        Digite uma mensagem e pressione enviar para ver os componentes funcionando juntos. Os estilos são entregues pelos pacotes
+        publicados.
+      </p>
+    </header>
+
+    <lib-input
+      label="Mensagem"
+      placeholder="Descreva sua ideia..."
+      hint="O valor é armazenado no componente pai através de [(value)]."
+      [(value)]="feedback"
+    />
+
+    <div class="demo-form__actions">
+      <lib-button
+        label="Limpar"
+        variant="ghost"
+        [disabled]="!feedback"
+        (pressed)="feedback = ''"
+      />
+
+      <lib-button
+        label="Enviar"
+        variant="primary"
+        [disabled]="!canSubmit"
+        (pressed)="submitFeedback()"
+      />
+    </div>
+
+    <p class="demo-form__result" *ngIf="submittedMessage">
+      Última mensagem enviada:
+      <strong>{{ submittedMessage }}</strong>
+    </p>
+  </section>
+</main>
