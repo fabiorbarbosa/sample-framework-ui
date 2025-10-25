@@ -22,8 +22,8 @@
       <p class="eyebrow">Feedback instantâneo</p>
       <h2>Combine lib-input e lib-button</h2>
       <p>
-        Digite uma mensagem e pressione enviar para ver os componentes funcionando juntos. Os estilos são entregues pelos pacotes
-        publicados.
+        Digite uma mensagem e pressione enviar para ver os componentes
+        funcionando juntos. Os estilos são entregues pelos pacotes publicados.
       </p>
     </header>
 
@@ -33,6 +33,14 @@
       hint="O valor é armazenado no componente pai através de [(value)]."
       [(value)]="feedback"
     />
+
+    <lib-input
+      [label]="'Nome completo'"
+      [placeholder]="'Ex: Maria Silva'"
+      [hint]="'Utilize o nome que será exibido para os clientes'"
+      [type]="'text'"
+      [value]="''"
+    ></lib-input>
 
     <div class="demo-form__actions">
       <lib-button
