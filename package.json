@@ -14,7 +14,8 @@
     "build:input": "npm run sync:styles && ng build input",
     "build:libs": "npm run build:core && npm run build:card && npm run build:button && npm run build:input",
     "storybook": "ng run core:storybook",
-    "build-storybook": "ng run core:build-storybook"
+    "build-storybook": "ng run core:build-storybook",
+    "install:github-libs": "bash tools/install-from-github.sh"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +27,10 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
+    "@sample-framework-ui/button": "https://raw.githubusercontent.com/fabiorbarbosa/sample-framework-ui/main/dist-pack/button.dev.25.10.2025.tgz",
+    "@sample-framework-ui/card": "https://raw.githubusercontent.com/fabiorbarbosa/sample-framework-ui/main/dist-pack/card.dev.25.10.2025.tgz",
+    "@sample-framework-ui/core": "https://raw.githubusercontent.com/fabiorbarbosa/sample-framework-ui/main/dist-pack/core.dev.25.10.2025.tgz",
+    "@sample-framework-ui/input": "https://raw.githubusercontent.com/fabiorbarbosa/sample-framework-ui/main/dist-pack/input.dev.25.10.2025.tgz",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"

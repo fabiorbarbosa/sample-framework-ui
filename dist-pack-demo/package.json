@@ -18,10 +18,6 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
-    "@sample-framework-ui/button": "file:../dist-pack/button.dev.25.10.2025.tgz",
-    "@sample-framework-ui/card": "file:../dist-pack/card.dev.25.10.2025.tgz",
-    "@sample-framework-ui/core": "file:../dist-pack/core.dev.25.10.2025.tgz",
-    "@sample-framework-ui/input": "file:../dist-pack/input.dev.25.10.2025.tgz",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
