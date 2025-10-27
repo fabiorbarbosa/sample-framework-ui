@@ -17,13 +17,18 @@ for LIB in "${LIBS[@]}"; do
       NEW_NAME="${LIB}.${BRANCH}.tgz"
       ;;
     *)
-      DIA=$(date +%d)
-      MES=$(date +%m)
-      ANO=$(date +%Y)
-      NEW_NAME="${LIB}.dev.${DIA}.${MES}.${ANO}.tgz"
+      # DIA=$(date +%d)
+      # MES=$(date +%m)
+      # ANO=$(date +%Y)
+      # NEW_NAME="${LIB}.dev.${DIA}.${MES}.${ANO}.tgz"
+      NEW_NAME="${LIB}.dev.tgz"
       ;;
   esac
 
   mv "$TGZ_ORIGINAL" "../../${DIST_PACK}/$NEW_NAME"
   cd - > /dev/null
 done
+
+echo "Pacotes criados em ${DIST_PACK}/:"
+
+source ./install-local-packages.sh .

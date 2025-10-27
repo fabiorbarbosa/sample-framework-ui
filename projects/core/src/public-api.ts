@@ -1,3 +1,3 @@
-export * from "./lib/core.service";
-export * from "./lib/core.component";
-export * from "./lib/core.module";
+export * from './lib/theme.tokens';
+export * from './lib/theme.service';
+export * from './lib/core.module';

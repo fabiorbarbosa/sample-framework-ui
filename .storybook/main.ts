@@ -1,4 +1,6 @@
 import type { StorybookConfig } from '@storybook/angular';
+import { resolve } from 'node:path';
+import { TailwindSyncPlugin } from '../tools/storybook/tailwind-sync-plugin';
 
 const config: StorybookConfig = {
   stories: [
@@ -16,6 +18,16 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: 'tag',
+  },
+  webpackFinal: async (baseConfig) => {
+    baseConfig.plugins = baseConfig.plugins ?? [];
+    baseConfig.plugins.push(
+      new TailwindSyncPlugin({
+        root: resolve(__dirname, '..'),
+        command: 'node tools/sync-styles.mjs',
+      })
+    );
+    return baseConfig;
   },
 };
 

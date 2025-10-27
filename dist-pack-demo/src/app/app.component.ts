@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LibThemeName, ThemeService } from '@sample-framework-ui/core';
 
 type FeatureCard = {
   eyebrow: string;
@@ -15,6 +16,7 @@ type FeatureCard = {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  theme: LibThemeName = 'light';
   readonly cards: FeatureCard[] = [
     {
       eyebrow: 'Design System',
@@ -42,6 +44,10 @@ export class AppComponent {
   feedback = '';
   submittedMessage = '';
 
+  constructor(private readonly themeService: ThemeService) {
+    this.themeService.setTheme(this.theme);
+  }
+
   get canSubmit(): boolean {
     return this.feedback.trim().length > 0;
   }
@@ -54,5 +60,14 @@ export class AppComponent {
 
     this.submittedMessage = message;
     this.feedback = '';
+  }
+
+  setTheme(theme: LibThemeName): void {
+    if (this.theme === theme) {
+      return;
+    }
+
+    this.theme = theme;
+    this.themeService.setTheme(theme);
   }
 }

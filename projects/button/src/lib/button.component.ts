@@ -5,7 +5,7 @@ type ButtonVariant = 'primary' | 'secondary' | 'ghost';
 @Component({
   selector: 'lib-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.css', './button.styles.css'],
+  styleUrls: ['./button.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {

@@ -1,8 +1,40 @@
 <main class="demo-shell">
-  <lib-core-banner
-    title="Sample Framework UI"
-    subtitle="Demonstração rápida consumindo os pacotes .tgz gerados em dist-pack."
-  />
+  <section class="demo-hero">
+    <div class="demo-hero__copy">
+      <p class="demo-hero__eyebrow">Angular 18 · Tailwind CSS</p>
+      <h1>Sample Framework UI</h1>
+      <p>
+        Demonstração rápida consumindo os pacotes .tgz gerados em <code>dist-pack</code>.
+        O tema aplicado abaixo é orquestrado pela <code>ThemeService</code> da lib core.
+      </p>
+    </div>
+    <ul class="demo-hero__pill-list">
+      <li class="demo-hero__pill">Core</li>
+      <li class="demo-hero__pill">Card</li>
+      <li class="demo-hero__pill">Button</li>
+      <li class="demo-hero__pill">Input</li>
+    </ul>
+  </section>
+
+  <section class="demo-theme-switcher" aria-label="Controle de tema">
+    <p>Tema ativo: <strong>{{ theme | titlecase }}</strong></p>
+    <div class="demo-theme-switcher__controls">
+      <button
+        type="button"
+        [class.active]="theme === 'light'"
+        (click)="setTheme('light')"
+      >
+        Claro
+      </button>
+      <button
+        type="button"
+        [class.active]="theme === 'dark'"
+        (click)="setTheme('dark')"
+      >
+        Escuro
+      </button>
+    </div>
+  </section>
 
   <section class="demo-grid">
     <lib-card

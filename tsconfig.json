@@ -4,20 +4,20 @@
     "baseUrl": ".",
     "paths": {
       "@sample-framework-ui/core": [
-        "dist/core",
-        "projects/core/src/public-api.ts"
+        "projects/core/src/public-api.ts",
+        "dist/core"
       ],
       "@sample-framework-ui/card": [
-        "dist/card",
-        "projects/card/src/public-api.ts"
+        "projects/card/src/public-api.ts",
+        "dist/card"
       ],
       "@sample-framework-ui/button": [
-        "dist/button",
-        "projects/button/src/public-api.ts"
+        "projects/button/src/public-api.ts",
+        "dist/button"
       ],
       "@sample-framework-ui/input": [
-        "dist/input",
-        "projects/input/src/public-api.ts"
+        "projects/input/src/public-api.ts",
+        "dist/input"
       ]
     },
     "outDir": "./dist/out-tsc",

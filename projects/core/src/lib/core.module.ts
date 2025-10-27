@@ -1,11 +1,19 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 
-import { CoreComponent } from './core.component';
+import { ThemeService } from './theme.service';
+
+function initializeTheme(themeService: ThemeService) {
+  return () => themeService.initialize();
+}
 
 @NgModule({
-  declarations: [CoreComponent],
-  imports: [CommonModule],
-  exports: [CoreComponent],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeTheme,
+      deps: [ThemeService],
+      multi: true,
+    },
+  ],
 })
 export class CoreModule {}

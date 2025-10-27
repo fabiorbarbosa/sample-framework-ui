@@ -2,7 +2,25 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "types": ["node"],
-    "allowJs": true
+    "allowJs": true,
+    "paths": {
+      "@sample-framework-ui/core": [
+        "../projects/core/src/public-api.ts",
+        "../dist/core"
+      ],
+      "@sample-framework-ui/card": [
+        "../projects/card/src/public-api.ts",
+        "../dist/card"
+      ],
+      "@sample-framework-ui/button": [
+        "../projects/button/src/public-api.ts",
+        "../dist/button"
+      ],
+      "@sample-framework-ui/input": [
+        "../projects/input/src/public-api.ts",
+        "../dist/input"
+      ]
+    }
   },
   "exclude": [],
   "include": [

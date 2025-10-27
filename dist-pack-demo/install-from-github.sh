@@ -4,7 +4,7 @@ set -euo pipefail
 
 REPO_BASE_URL="${SAMPLE_LIBS_BASE_URL:-https://raw.githubusercontent.com/fabiorbarbosa/sample-framework-ui}"
 REF="${SAMPLE_LIBS_REF:-main}"
-TAG_SUFFIX="${SAMPLE_LIBS_TAG:-dev.25.10.2025}"
+TAG_SUFFIX="${SAMPLE_LIBS_TAG:-dev.26.10.2025}"
 TARGET_DIR="${1:-.}"
 SLEEP_SECONDS="${SAMPLE_LIBS_SLEEP:-10}"
 

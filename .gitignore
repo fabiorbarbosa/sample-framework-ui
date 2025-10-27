@@ -6,6 +6,7 @@
 /.tmp
 /out-tsc
 /bazel-out
+projects/*/src/lib/*.component.css
 
 # Node
 /node_modules

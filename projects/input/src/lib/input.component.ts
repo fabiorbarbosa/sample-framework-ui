@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 @Component({
   selector: 'lib-input',
   templateUrl: './input.component.html',
-  styleUrls: ['./input.component.css', './input.styles.css'],
+  styleUrls: ['./input.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InputComponent {
