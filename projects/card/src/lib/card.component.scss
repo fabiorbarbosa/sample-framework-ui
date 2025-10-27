@@ -1,11 +1,11 @@
-@use '@sample-framework-ui/core/styles' as core;
+@use 'core';
 
 :host {
   display: block;
 }
 
 .lib-card {
-  @apply flex flex-col gap-4 rounded-2xl border p-6 shadow-sm transition-shadow duration-200;
+  @apply flex flex-col gap-4 rounded-2xl border p-6 m-2 shadow-sm transition-shadow duration-200;
   @include core.surface-panel(1.5rem);
 }
 
