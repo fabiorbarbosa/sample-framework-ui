@@ -50,9 +50,13 @@ libs.forEach((lib) => {
     `${componentName}.css`
   );
 
-  execSync(`npx sass ${sourcePath} ${compiledScssPath} --no-source-map`, {
-    stdio: "inherit",
-  });
+  const loadPath = resolve(root, "projects");
+  execSync(
+    `npx sass --load-path ${loadPath} ${sourcePath} ${compiledScssPath} --no-source-map`,
+    {
+      stdio: "inherit",
+    }
+  );
 
   execSync(
     `npx tailwindcss -c ${tailwindConfig} -i ${compiledScssPath} -o ${tailwindOutputPath} --minify`,

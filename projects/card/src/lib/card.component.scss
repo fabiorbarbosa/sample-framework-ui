@@ -1,13 +1,12 @@
+@use '@sample-framework-ui/core/styles' as core;
+
 :host {
   display: block;
 }
 
 .lib-card {
   @apply flex flex-col gap-4 rounded-2xl border p-6 shadow-sm transition-shadow duration-200;
-  border-color: var(--lib-color-border);
-  background-color: var(--lib-color-surface);
-  color: var(--lib-color-text);
-  box-shadow: var(--lib-color-card-shadow);
+  @include core.surface-panel(1.5rem);
 }
 
 .lib-card--highlight {
@@ -21,18 +20,18 @@
 
 .lib-card__eyebrow {
   @apply text-xs font-semibold uppercase tracking-widest;
-  color: var(--lib-color-primary);
+  @include core.eyebrow(var(--lib-color-primary));
 }
 
 .lib-card__title {
   @apply text-xl font-semibold;
-  color: var(--lib-color-text);
+  @include core.body-text();
 }
 
 .lib-card__subtitle,
 .lib-card__body {
   @apply text-sm;
-  color: var(--lib-color-muted);
+  @include core.body-text(var(--lib-color-muted));
 }
 
 .lib-card__footer {

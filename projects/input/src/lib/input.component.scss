@@ -1,29 +1,21 @@
+@use '@sample-framework-ui/core/styles' as core;
+
 :host {
   display: block;
 }
 
 .lib-input {
-  @apply flex w-full flex-col gap-1;
+  @include core.input-wrapper();
 }
 
 .lib-input__label {
-  @apply text-sm font-medium;
-  color: var(--lib-color-text);
+  @include core.input-label();
 }
 
 .lib-input__control {
-  @apply rounded-xl border px-4 py-2 text-base shadow-inner shadow-black/5 focus:outline-none focus:ring-2;
-  border-color: var(--lib-color-input-border);
-  background-color: var(--lib-color-input-bg);
-  color: var(--lib-color-text);
-  --tw-ring-color: var(--lib-color-primary-soft);
-}
-
-.lib-input__control::placeholder {
-  color: var(--lib-color-input-placeholder);
+  @include core.input-control();
 }
 
 .lib-input__hint {
-  @apply text-xs;
-  color: var(--lib-color-muted);
+  @include core.caption-muted();
 }

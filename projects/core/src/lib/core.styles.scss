@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lib-radius: 1rem;
+  --lib-color-surface: #ffffff;
+  --lib-color-surface-strong: #f8fafc;
+  --lib-color-border: #e2e8f0;
+  --lib-color-text: #0f172a;
+  --lib-color-muted: #475569;
+  --lib-color-muted-strong: #cbd5f5;
+  --lib-color-primary: #2563eb;
+  --lib-color-primary-hover: #3b82f6;
+  --lib-color-on-primary: #ffffff;
+  --lib-color-primary-soft: #93c5fd;
+  --lib-color-secondary-bg: #ffffff;
+  --lib-color-secondary-text: #1e293b;
+  --lib-color-ghost-text: #64748b;
+  --lib-color-ghost-hover: #0f172a;
+  --lib-color-input-bg: #ffffff;
+  --lib-color-input-border: #e2e8f0;
+  --lib-color-input-placeholder: #94a3b8;
+  --lib-color-hero-from: #f0f9ff;
+  --lib-color-hero-via: #f8fafc;
+  --lib-color-hero-to: #eef2ff;
+  --lib-color-card-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+[data-lib-theme='dark'] {
+  --lib-color-surface: #0f172a;
+  --lib-color-surface-strong: #1e293b;
+  --lib-color-border: #334155;
+  --lib-color-text: #f8fafc;
+  --lib-color-muted: #cbd5f5;
+  --lib-color-muted-strong: #818cf8;
+  --lib-color-primary: #818cf8;
+  --lib-color-primary-hover: #a5b4fc;
+  --lib-color-on-primary: #0f172a;
+  --lib-color-primary-soft: #6366f1;
+  --lib-color-secondary-bg: #1e293b;
+  --lib-color-secondary-text: #e2e8f0;
+  --lib-color-ghost-text: #e2e8f0;
+  --lib-color-ghost-hover: #ffffff;
+  --lib-color-input-bg: #0f172a;
+  --lib-color-input-border: #334155;
+  --lib-color-input-placeholder: #94a3b8;
+  --lib-color-hero-from: #1e293b;
+  --lib-color-hero-via: #0f172a;
+  --lib-color-hero-to: #1b1833;
+  --lib-color-card-shadow: 0 25px 50px rgba(15, 23, 42, 0.45);
+}
+
+@mixin transition-theme($props: (background-color, color, border-color, box-shadow)) {
+  transition-property: $props;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+}
+
+@mixin surface-panel($radius: var(--lib-radius), $shadow: var(--lib-color-card-shadow)) {
+  border: 1px solid var(--lib-color-border);
+  @if $radius != null {
+    border-radius: $radius;
+  }
+  background-color: var(--lib-color-surface);
+  color: var(--lib-color-text);
+  box-shadow: $shadow;
+  @include transition-theme();
+}
+
+@mixin hero-panel() {
+  @apply flex flex-col gap-6 rounded-[2rem] border p-8 shadow-elevated;
+  @include surface-panel(2rem);
+  background-image: linear-gradient(
+    90deg,
+    var(--lib-color-hero-from),
+    var(--lib-color-hero-via),
+    var(--lib-color-hero-to)
+  );
+}
+
+@mixin eyebrow($color: var(--lib-color-muted)) {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-weight: 600;
+  color: $color;
+}
+
+@mixin body-text($color: var(--lib-color-text)) {
+  color: $color;
+  line-height: 1.5;
+}
+
+@mixin pill() {
+  @apply rounded-pill border px-4 py-2 text-sm font-medium shadow-sm;
+  border-color: var(--lib-color-border);
+  background-color: var(--lib-color-secondary-bg);
+  color: var(--lib-color-secondary-text);
+  box-shadow: var(--lib-color-card-shadow);
+  @include transition-theme();
+}
+
+@mixin button-base() {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border px-5 py-2 text-sm font-semibold transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-60;
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--lib-color-text);
+  @include transition-theme();
+}
+
+@mixin button-focus-ring() {
+  &:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--lib-color-surface),
+      0 0 0 4px var(--lib-color-primary-soft);
+  }
+}
+
+@mixin button-primary() {
+  background-color: var(--lib-color-primary);
+  color: var(--lib-color-on-primary);
+
+  &:hover:not(:disabled) {
+    background-color: var(--lib-color-primary-hover);
+  }
+}
+
+@mixin button-secondary() {
+  border-color: var(--lib-color-border);
+  background-color: var(--lib-color-secondary-bg);
+  color: var(--lib-color-secondary-text);
+
+  &:hover:not(:disabled) {
+    border-color: var(--lib-color-primary-soft);
+  }
+}
+
+@mixin button-ghost() {
+  background-color: transparent;
+  color: var(--lib-color-ghost-text);
+
+  &:hover:not(:disabled) {
+    color: var(--lib-color-ghost-hover);
+  }
+}
+
+@mixin input-wrapper() {
+  @apply flex w-full flex-col gap-1;
+}
+
+@mixin input-label() {
+  @apply text-sm font-medium;
+  color: var(--lib-color-text);
+}
+
+@mixin input-control() {
+  @apply rounded-xl border px-4 py-2 text-base shadow-inner shadow-black/5 focus:outline-none focus:ring-2;
+  border-color: var(--lib-color-input-border);
+  background-color: var(--lib-color-input-bg);
+  color: var(--lib-color-text);
+  --tw-ring-color: var(--lib-color-primary-soft);
+  @include transition-theme();
+
+  &::placeholder {
+    color: var(--lib-color-input-placeholder);
+  }
+}
+
+@mixin caption-muted() {
+  @apply text-xs;
+  color: var(--lib-color-muted);
+}

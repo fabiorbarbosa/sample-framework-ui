@@ -1,3 +1,5 @@
+@use '@sample-framework-ui/core/styles' as core;
+
 :host {
   display: block;
   min-height: 100vh;
@@ -19,17 +21,7 @@
 .demo-hero {
   display: grid;
   gap: 1.5rem;
-  border: 1px solid var(--lib-color-border);
-  border-radius: 2rem;
-  padding: 2rem;
-  background: linear-gradient(
-    90deg,
-    var(--lib-color-hero-from),
-    var(--lib-color-hero-via),
-    var(--lib-color-hero-to)
-  );
-  box-shadow: var(--lib-color-card-shadow);
-  color: var(--lib-color-text);
+  @include core.hero-panel();
 
   h1 {
     font-size: clamp(2rem, 3vw, 2.5rem);
@@ -84,11 +76,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid var(--lib-color-border);
-  border-radius: 999px;
   padding: 0.5rem 1rem;
-  background: var(--lib-color-surface);
-  color: var(--lib-color-text);
+  @include core.surface-panel(999px, none);
+  box-shadow: none;
 
   p {
     margin: 0;
@@ -133,15 +123,11 @@
 }
 
 .demo-form {
-  background: var(--lib-color-surface);
-  border: 1px solid var(--lib-color-border);
-  border-radius: 1.5rem;
+  @include core.surface-panel(1.5rem);
   padding: 2rem;
-  box-shadow: var(--lib-color-card-shadow);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  color: var(--lib-color-text);
 
   header {
     display: flex;

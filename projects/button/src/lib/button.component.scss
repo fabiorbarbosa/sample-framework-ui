@@ -1,43 +1,22 @@
+@use '@sample-framework-ui/core/styles' as core;
+
 :host {
   display: inline-flex;
 }
 
 .lib-btn {
-  @apply inline-flex items-center justify-center gap-2 rounded-xl border px-5 py-2 text-sm font-semibold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
-  border-color: transparent;
-  color: var(--lib-color-text);
-  background-color: transparent;
-}
-
-.lib-btn:focus-visible {
-  --tw-ring-color: var(--lib-color-primary-soft);
-  --tw-ring-offset-color: var(--lib-color-surface);
+  @include core.button-base();
+  @include core.button-focus-ring();
 }
 
 .lib-btn--primary {
-  background-color: var(--lib-color-primary);
-  color: var(--lib-color-on-primary);
-}
-
-.lib-btn--primary:hover:not(:disabled) {
-  background-color: var(--lib-color-primary-hover);
+  @include core.button-primary();
 }
 
 .lib-btn--secondary {
-  border-color: var(--lib-color-border);
-  background-color: var(--lib-color-secondary-bg);
-  color: var(--lib-color-secondary-text);
-}
-
-.lib-btn--secondary:hover:not(:disabled) {
-  border-color: var(--lib-color-primary-soft);
+  @include core.button-secondary();
 }
 
 .lib-btn--ghost {
-  background-color: transparent;
-  color: var(--lib-color-ghost-text);
-}
-
-.lib-btn--ghost:hover:not(:disabled) {
-  color: var(--lib-color-ghost-hover);
+  @include core.button-ghost();
 }

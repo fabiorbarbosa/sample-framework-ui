@@ -3,5 +3,17 @@
   "dest": "../../dist/core",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": [
+    {
+      "glob": "core.styles.scss",
+      "input": "src/lib",
+      "output": "styles"
+    },
+    {
+      "glob": "**/*.scss",
+      "input": "src/lib/styles",
+      "output": "styles"
+    }
+  ]
 }

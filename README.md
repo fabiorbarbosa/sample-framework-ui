@@ -16,6 +16,7 @@ Edite apenas os arquivos `projects/<lib>/src/lib/<lib>.component.scss`. Antes de
 
 - A `ThemeService` (exportada por `@sample-framework-ui/core`) aplica tokens de cor na raiz do documento e pode alternar entre `light` e `dark`.
 - Use `themeService.setTheme('dark')` para atualizar todas as libs simultaneamente ou `applyThemeToDocument(document, 'light')` em ambientes sem DI (ex.: Storybook decorators).
+- O arquivo `projects/core/src/lib/core.styles.scss` concentra as variáveis CSS e mixins base. Importe-o nos SCSS das libs (`@use '../../../core/src/lib/core.styles.scss' as core;`) para herdar as mesmas superfícies, botões e campos.
 
 ## Estrutura
 
