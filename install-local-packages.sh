@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # REPO_BASE_URL="${SAMPLE_LIBS_BASE_URL:-https://raw.githubusercontent.com/fabiorbarbosa/sample-framework-ui}"
-# REF="${SAMPLE_LIBS_REF:-main}"
+REF="${SAMPLE_LIBS_REF:-main}"
 TAG_SUFFIX="${SAMPLE_LIBS_TAG:-dev}"
 TARGET_DIR="${1:-.}"
 SLEEP_SECONDS="${SAMPLE_LIBS_SLEEP:-10}"
@@ -11,24 +11,25 @@ SLEEP_SECONDS="${SAMPLE_LIBS_SLEEP:-10}"
 LIBS=(core card button input)
 
 log() {
-  printf '[install-from-github] %s\n' "$1"
+  printf '[install-local-package] %s\n' "$1"
 }
 
 retry_install() {
   local lib="$1"
   local attempt=1
   # local tarball="${REPO_BASE_URL}/${REF}/dist-pack/${lib}.${TAG_SUFFIX}.tgz"
-  local tarball="${lib}.${TAG_SUFFIX}.tgz"
-  local spec="@sample-framework-ui/${lib}@${tarball}"
+  local tarball="dist-pack/${lib}.${TAG_SUFFIX}.tgz"
+  local spec="@sample-framework-ui/${lib}@file:${tarball}"
 
   while true; do
-    log "desinstalando ${lib} (tentativa ${attempt})"
-    if npm uninstall --prefix "${TARGET_DIR}" "${spec}"; then
-      log "${lib} desinstalado com sucesso"
-      break
-    fi
+    # log "desinstalando ${lib} (tentativa ${attempt})"
+    # if npm uninstall --prefix "${TARGET_DIR}" "${spec}"; then
+    #   log "${lib} desinstalado com sucesso"
+    #   break
+    # fi
 
     log "instalando ${lib} (tentativa ${attempt})"
+    log "npm install --prefix " "${TARGET_DIR}" "${spec}"
     if npm install --prefix "${TARGET_DIR}" "${spec}"; then
       log "${lib} instalado com sucesso"
       break

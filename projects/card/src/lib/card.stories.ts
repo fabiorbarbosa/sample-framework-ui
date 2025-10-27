@@ -1,14 +1,13 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 
 import { CardComponent } from './card.component';
-import { CardModule } from './card.module';
 
 const meta: Meta<CardComponent & { body?: string }> = {
   title: 'Card/CardComponent',
   component: CardComponent,
   decorators: [
     moduleMetadata({
-      imports: [CardModule],
+      imports: [CardComponent],
     }),
   ],
   tags: ['autodocs'],

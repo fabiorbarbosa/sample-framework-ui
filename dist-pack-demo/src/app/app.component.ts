@@ -30,13 +30,13 @@ export class AppComponent {
       eyebrow: 'Layouts',
       title: 'Cards composables',
       subtitle: 'Ideal para listas de produtos ou destaques.',
-      copy: 'O CardModule aceita conteúdo projetado, permitindo misturar texto e botões mantendo espaçamento e responsividade.',
+      copy: 'O CardComponent aceita conteúdo projetado, permitindo misturar texto e botões mantendo espaçamento e responsividade.',
     },
     {
       eyebrow: 'Formulários',
       title: 'Entradas acessíveis',
       subtitle: 'Componentes com label, hint e estados.',
-      footer: 'InputModule + ButtonModule',
+      footer: 'InputComponent + ButtonComponent',
       copy: 'Combine lib-input e lib-button para criar fluxos rápidos com estados de validação consistentes.',
     },
   ];

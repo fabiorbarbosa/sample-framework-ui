@@ -6,6 +6,7 @@ type ButtonVariant = 'primary' | 'secondary' | 'ghost';
   selector: 'lib-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.css'],
+  standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {

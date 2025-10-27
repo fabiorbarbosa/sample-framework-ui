@@ -1,7 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 
 import { InputComponent } from './input.component';
-import { InputModule } from './input.module';
 
 type Story = StoryObj<InputComponent>;
 
@@ -10,7 +9,7 @@ const meta: Meta<InputComponent> = {
   component: InputComponent,
   decorators: [
     moduleMetadata({
-      imports: [InputModule],
+      imports: [InputComponent],
     }),
   ],
   argTypes: {

@@ -1,7 +1,6 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 
 import { ButtonComponent } from './button.component';
-import { ButtonModule } from './button.module';
 
 type ButtonStory = StoryObj<ButtonComponent>;
 
@@ -10,7 +9,7 @@ const meta: Meta<ButtonComponent> = {
   component: ButtonComponent,
   decorators: [
     moduleMetadata({
-      imports: [ButtonModule],
+      imports: [ButtonComponent],
     }),
   ],
   argTypes: {

@@ -41,7 +41,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "../projects"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -100,7 +105,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "../projects"
+              ]
+            }
           }
         }
       }
